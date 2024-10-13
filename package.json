@@ -1,0 +1,30 @@
+{
+  "name": "book-app",
+  "version": "1.0.0",
+  "description": "Cool book app",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "live-server",
+    "build": "rollup -c --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/Anastasia-Papchenko/-.git)"
+  },
+  "keywords": [
+    "books"
+  ],
+  "author": "Anastasia-Papchenko",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.11.1",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "eslint": "^9.11.1",
+    "globals": "^15.10.0",
+    "rollup-plugin-import-css": "^3.5.4"
+  },
+  "dependencies": {
+    "on-change": "^5.0.1"
+  }
+}
