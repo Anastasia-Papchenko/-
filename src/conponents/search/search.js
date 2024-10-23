@@ -7,13 +7,20 @@ export class Search extends DivComponent {
         this.state = state;
     }
 
+    search() {
+        const valur = this.el.querySelector('input').value;
+        this.state.searchQuery = valur;
+
+    }
+
     render() {
         this.el.classList.add('search');
         this.el.innerHTML = `
             <div class="search__wrapper">
                 <input
+                    id="searchInput"
                     type="text"
-                    placeholder="Найти книгу или автора...."
+                    placeholder="Найти фильм...."
                     class="search__input"
                     value="${this.state.searchQuery ? this.state.searchQuery : ''}"
                 />
@@ -23,6 +30,12 @@ export class Search extends DivComponent {
                 <img src="/static/search-white.svg" alt="Иконка поиска"/>
             </button>
         `;
+        this.el.querySelector('button').addEventListener('click', this.search.bind(this));
+        this.el.querySelector('input').addEventListener('keydown', (event) => {
+            if (event.code === 'Enter') {
+                this.search();
+            }
+        })
         return this.el;
     }
 };
