@@ -11,15 +11,15 @@ export class Header extends DivComponent {
         this.el.classList.add('header');
         this.el.innerHTML = `
             <div>
-                <img src="/static/logo.svg" alt="Логотип" />
+                <img src="/static/logo2.svg" alt="Логотип" />
             </div>
             <div class="menu">
                 <a class="menu__item" href="#">
-                    <img src="/static/search.svg" alt="Поиск иконка" />
+                    <img class="img_item" src="/static/search.svg" alt="Поиск иконка" />
                     Поиск фильмов
                 </a>
                 <a class="menu__item" href="#favorites">
-                    <img src="/static/favorites.svg" alt="Избранное иконка" />
+                    <img class="img_item" src="/static/favorites.svg" alt="Избранное иконка" />
                     Избранное
                 </a>
                 <div class="menu__counter">
